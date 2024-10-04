@@ -1,17 +1,35 @@
 //Hard-coded permanent team member list. Updated in GitHub repo.
-var permanentMembers = [
-  "Arvind",
-  "David",
-  "Dylan",
-  "Jacqueline",
-  "Judith",
-  "Kelly",
-  "Kuljit",
-  "Manpreet",
-  "Rebecca",
-  "Royali",
-  //"Shengnan"
-];
+var dayOfTheWeek= new Date().getDay();
+var permanentMembers;
+if (dayOfTheWeek = 2) { //If it's tuesday, add Bob and Natalie to the Spin wheel or not
+  permanentMembers = [
+    "Arvind",
+    "Bob",
+    "Dylan",
+    "Jacqueline",
+    "Judith",
+    "Kelly",
+    "Kenny",
+    "Kuljit",
+    "Natalie",
+    "Rebecca",
+    "Shengnan"
+  ];
+}
+else
+{
+  permanentMembers = [
+    "Arvind",
+    "Dylan",
+    "Jacqueline",
+    "Judith",
+    "Kelly",
+    "Kenny",
+    "Kuljit",
+    "Rebecca",
+    "Shengnan"
+  ];
+}
 
 //Cookie array of boolean (false/undefined or true) for each permanent member. Toggles between Here (false; default) or Away (true).
 if (typeof (Cookies.get('disabledMembers')) === 'undefined') { //initialize cookie if not already set 
