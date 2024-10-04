@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Roulette Wheel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/spinner-sidebar.css" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link href="css/spinner.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets\images\favicon\crypto.ico">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Menu 
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Credits</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <h1 id="result"><br> </h1>
+
+            <!-- Button for expanding and collapsing the editable tables of active team members. -->
+            <button id="members-editor-toggle-button"  class="float-right btn-outline-primary" type="button" data-toggle="collapse" data-target="#members-editor-panel" aria-expanded="false" aria-controls="members-editor-panel">
+                +
+            </button>
+
+            <!-- Dynamically updated table for permanent team members, and table for temporary team members. -->
+            <div id="members-editor-panel" class="float-right collapse" >
+                <table id='permanent-members-table'>
+                    <tbody>
+                        <tr>
+                            <th>Name</th><th>Available</th>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <br>
+                <div>
+                    <input id="new_temp_text" type="text" minlength="1" size="5">
+                    <button id="new_temp_btn" class="btn-outline-primary" type="button">Add Temp</button>
+                </div>
+                <table id='temp-members-table'>
+                    <tbody>
+                        <tr>
+                            <th>Name</th><th><button id="remove_all_temp_btn" class="btn-outline-primary" type="button">Clear</button></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="spin" type="button" class="btn btn-outline-primary">Click to Spin!</button>
+            <!--<input type="button" value="spin" style="float:left;" id="spin" />-->
+            <button id="spin2" type="button" class="btn btn-outline-light">Click to Spin!</button>
+
+            <canvas id="canvas" width="750" height="750"></canvas>
+
+            <div id="description" class="container-fluid">
+                <br>
+                <br>
+                <h1>Simple Roulette Wheel</h1>
+                <p>Simple roulette wheel created on a canvas. Press the spin button to trigger the spin</p>
+                <p>Published on <code>Github Pages</code> using <code>html, css and jquery</code>.</p>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                <br>
+                <a href="#menu-toggle" class="btn btn-outline-dark" id="menu-toggle">Toggle Menu</a>
+            </div>
+
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- https://github.com/js-cookie/js-cookie Klaus Hartl, Fagner Brack, Awesome Contributors; Pre-release v3.0.0-rc.1 Sep 8 2020 -->
+    <script src="vendor/js-cookie/js.cookie.min.js"></script>
+
+    <!-- My files -->
+    <script src="js/spinner.js"></script>
+    <script src="css/spinner.css"></script>
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    
+    <!-- Members Editor Panel Toggle Button Script -->
+    <script>
+    $('#members-editor-panel').on('show.bs.collapse', function () {
+        document.getElementById('members-editor-toggle-button').innerText = '-';
+    })
+    $('#members-editor-panel').on('hide.bs.collapse', function () {
+        document.getElementById('members-editor-toggle-button').innerText = '+';
+    })
+    </script>
+
+</body>
+
+</html>
