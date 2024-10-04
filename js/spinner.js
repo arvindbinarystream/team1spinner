@@ -1,7 +1,7 @@
 //Hard-coded permanent team member list. Updated in GitHub repo.
 var dayOfTheWeek= new Date().getDay();
 var permanentMembers;
-if (dayOfTheWeek = 2) { //If it's tuesday, add Bob and Natalie to the Spin wheel or not
+if (dayOfTheWeek == 2) { //If it's tuesday, add Bob and Natalie to the Spin wheel or not
   permanentMembers = [
     "Arvind",
     "Bob",
