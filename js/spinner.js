@@ -8,9 +8,12 @@ if (dayOfTheWeek == 2) { //If it's tuesday, add Bob and Natalie to the Spin whee
     "Dylan",
     "Jacqueline",
     "Judith",
+    "Judy",
     "Kelly",
     "Kenny",
     "Kuljit",
+    "Leon",
+    "Mary",
     "Natalie",
     "Rebecca",
     "Shengnan"
@@ -26,6 +29,8 @@ else
     "Kelly",
     "Kenny",
     "Kuljit",
+    "Leon",
+    "Mary",
     "Rebecca",
     "Shengnan"
   ];
